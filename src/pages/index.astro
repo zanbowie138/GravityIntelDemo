@@ -1,16 +1,17 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Navbar from '../components/Navbar';
-import Hero from '../components/Hero';
-import Portfolio from '../components/Portfolio';
-import Services from '../components/Services.astro';
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero";
+import Portfolio from "../components/Portfolio";
+import Services from "../components/Services.tsx";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout title="GravityIntel - Advanced Analytics & Machine Intelligence">
-  <main>
-    <Navbar client:load />
+  <main class="overflow-x-hidden">
     <Hero client:load />
     <Portfolio client:load />
-    <Services />
+    <Services client:load />
+    <Footer />
   </main>
-</Layout> 
+</Layout>
+

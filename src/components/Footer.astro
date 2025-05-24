@@ -1,0 +1,27 @@
+---
+const currentYear = new Date().getFullYear();
+
+const footerLinks = [
+  { name: 'Privacy Policy', href: '#' },
+  { name: 'Terms of Service', href: '#' },
+  { name: 'Contact Us', href: '#' },
+];
+---
+
+<footer class="bg-slate-950 text-slate-300 py-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row justify-between items-center">
+      <div class="text-center md:text-left mb-6 md:mb-0">
+        <p class="text-sm">&copy; {currentYear} GravityIntel. All rights reserved.</p>
+        <p class="text-xs mt-1">Empowering Insights, Driving Innovation.</p>
+      </div>
+      <nav class="flex gap-6">
+        {footerLinks.map(link => (
+          <a href={link.href} class="text-sm hover:text-slate-200 transition-colors duration-200">
+            {link.name}
+          </a>
+        ))}
+      </nav>
+    </div>
+  </div>
+</footer> 
