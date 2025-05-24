@@ -1,6 +1,7 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { HiMenu, HiX } from 'react-icons/hi';
 import { motion, AnimatePresence, LayoutGroup } from 'framer-motion';
+import icon from "../assets/icon_transparent.png";
 
 const navLinks = [
   { name: 'Home', href: '/' },
@@ -71,7 +72,7 @@ function NavbarContent({ isScrolled }: { isScrolled: boolean }) {
       <div className="px-6 sm:px-10 lg:px-16 py-3 z-50">
         <div className="flex justify-between items-center">
           <a href="/" className="flex items-center gap-3">
-            <img className="h-12 w-12 rounded-xl" src="/icon_transparent.png" alt="GravityIntel Logo" />
+            <img className="h-12 w-12 rounded-xl" src={icon.src} alt="GravityIntel Logo" />
             <span className={`text-2xl font-extrabold ${navStyles.textColor}`}>GravityIntel</span>
           </a>
           <LayoutGroup>

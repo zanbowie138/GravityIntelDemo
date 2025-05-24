@@ -1,24 +1,24 @@
-import React from "react";
 import { HiOutlineExternalLink } from "react-icons/hi";
 import { motion } from 'framer-motion';
+import icon from "../assets/icon.png";
 
 const projects = [
   {
     title: "AI-Powered Analytics Dashboard",
     description: "A real-time analytics platform leveraging machine learning to deliver actionable business insights.",
-    image: "/icon.png",
+    image: icon,
     link: "#",
   },
   {
     title: "E-Commerce Automation Suite",
     description: "Automated workflows and smart recommendations for modern online stores.",
-    image: "/icon.png",
+    image: icon,
     link: "#",
   },
   {
     title: "Cloud Data Integrator",
     description: "Seamlessly connect, transform, and visualize data from multiple cloud sources.",
-    image: "/icon.png",
+    image: icon,
     link: "#",
   },
 ];
@@ -96,7 +96,7 @@ export default function Portfolio() {
             >
               <div className="w-full aspect-video overflow-hidden">
                 <img 
-                  src={project.image} 
+                  src={project.image.src} 
                   alt={project.title} 
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" 
                 />
